@@ -6,6 +6,7 @@ $color-night: #001632;
 
 $color-red: #e53935;
 $color-blue: #2196f3;
+$color-pink: #e91e63;
 $color-green: #43a047;
 $color-purple: #9c27b0;
 $color-orange: #fb8c00;
@@ -77,6 +78,12 @@ button {
    outline: none;
    background: none;
    text-decoration: none;
+
+   @media only screen and (max-width: 768px) {
+      cursor: default !important;
+      border: none;
+      outline: none;
+   }
 }
 
 img,
@@ -85,30 +92,4 @@ video {
    max-width: 100%;
    height: auto;
    object-fit: cover;
-}
-
-// Section: Elements
-.container {
-   max-width: 80rem;
-   width: 100%;
-   height: auto;
-   padding: 0 2rem;
-   margin: 0 auto;
-
-   @media only screen and (max-width: 991px) {
-      padding: 0 1rem;
-      margin: 0 auto;
-   }
-}
-
-.brand {
-   font-family: inherit;
-   font-size: 1.75rem;
-   font-weight: 700;
-   line-height: inherit;
-   color: $color-black;
-   border: none;
-   outline: none;
-   text-transform: uppercase;
-   text-rendering: optimizeLegibility;
 }
