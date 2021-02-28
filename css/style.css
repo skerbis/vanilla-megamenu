@@ -445,10 +445,10 @@ video {
     top: 0;
   }
   .header .menu-mobile-trigger span:nth-child(2), .header .menu-mobile-trigger span:nth-child(3) {
-    top: 0.45rem;
+    top: 0.5rem;
   }
   .header .menu-mobile-trigger span:nth-child(4) {
-    top: 0.9rem;
+    top: 1rem;
   }
   .header-item-right {
     -webkit-box-align: center;
