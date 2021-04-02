@@ -10,7 +10,6 @@ menuSection.addEventListener('click', (e) => {
    if (!menu.classList.contains('active')) {
       return;
    }
-
    if (e.target.closest('.menu-item-has-children')) {
       const hasChildren = e.target.closest('.menu-item-has-children');
       showSubMenu(hasChildren);
@@ -33,11 +32,13 @@ menuOverlay.addEventListener('click', () => {
    toggleMenu();
 });
 
+// Show & Hide Toggle Menu Function
 function toggleMenu() {
    menu.classList.toggle('active');
    menuOverlay.classList.toggle('active');
 }
 
+// Show the Mobile Side Menu Function
 function showSubMenu(hasChildren) {
    subMenu = hasChildren.querySelector('.menu-subs');
    subMenu.classList.add('active');
@@ -47,6 +48,7 @@ function showSubMenu(hasChildren) {
    menu.querySelector('.menu-mobile-header').classList.add('active');
 }
 
+// Hide the Mobile Side Menu Function
 function hideSubMenu() {
    subMenu.style.animation = 'slideRight 0.5s ease forwards';
    setTimeout(() => {
@@ -57,6 +59,7 @@ function hideSubMenu() {
    menu.querySelector('.menu-mobile-header').classList.remove('active');
 }
 
+// Windows Screen Resizes Function
 window.onresize = function () {
    if (this.innerWidth > 991) {
       if (menu.classList.contains('active')) {
