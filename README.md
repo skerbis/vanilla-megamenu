@@ -1,5 +1,3 @@
-# Responsive Mega Menu
+# Responsive Megamenu
 
-**Responsive Mega Menu with Dropdown Created Using HTML5, CSS3 (Including SASS), and Vanilla JavaScript.**
-
-You can view the live version at [this link](https://megamenudev.netlify.app/)
+Responsive Megamenu with Dropdown Created Using HTML5, CSS3 (Including SCSS), and Vanilla JavaScript.
