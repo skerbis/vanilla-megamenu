@@ -1,3 +1,3 @@
-# Responsive Mega Menu
+# Responsive Megamenu
 
-**Responsive Mega Menu with Dropdown Created Using HTML5, CSS3 (Including SASS), and Vanilla JavaScript.**
+Responsive Megamenu with Dropdown Created Using HTML5, CSS3 (including SCSS), and Vanilla JavaScript.
