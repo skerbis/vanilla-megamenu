@@ -1,12 +1,19 @@
 :root {
-  --color-black: hsl(0, 0%, 7%);
+  --color-black: hsl(0, 0%, 10%);
   --color-white: hsl(0, 0%, 100%);
-  --color-gray: hsl(210, 14%, 75%);
-  --color-pink: hsl(340, 82%, 52%);
+  --color-darken: hsl(0, 0%, 20%);
+  --color-violet-100: hsl(257, 98%, 93%);
+  --color-violet-200: hsl(256, 98%, 87%);
+  --color-violet-300: hsl(255, 94%, 79%);
+  --color-violet-400: hsl(255, 93%, 72%);
+  --color-violet-500: hsl(255, 91%, 67%);
+  --color-violet-600: hsl(255, 86%, 63%);
+  --color-violet-700: hsl(255, 78%, 60%);
+  --color-violet-800: hsl(255, 67%, 55%);
+  --color-violet-900: hsl(255, 53%, 50%);
   --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-extra: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 *,
@@ -50,7 +57,6 @@ button {
   border: none;
   outline: none;
   background: none;
-  text-decoration: none;
 }
 
 img,
@@ -60,6 +66,12 @@ video {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 
 @-webkit-keyframes slideLeft {
@@ -119,12 +131,11 @@ video {
 }
 
 .brand {
-  font-family: inherit;
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: inherit;
-  color: var(--color-pink);
-  text-transform: uppercase;
+  display: block;
+  max-width: 8rem;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .header {
@@ -134,9 +145,9 @@ video {
   left: 0;
   width: 100%;
   height: auto;
-  padding: 0.75rem 0;
   margin: 0 auto;
-  z-index: 999;
+  padding: 0.75rem 0;
+  z-index: 100;
   background: var(--color-white);
   -webkit-box-shadow: var(--shadow-medium);
           box-shadow: var(--shadow-medium);
@@ -154,6 +165,9 @@ video {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .header-item-left {
   display: -webkit-box;
@@ -167,9 +181,6 @@ video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 66%;
-          flex: 0 0 66%;
 }
 .header-item-right {
   display: -webkit-box;
@@ -226,11 +237,11 @@ video {
   height: auto;
   margin-top: 1.75rem;
   padding: 1rem 2rem;
-  z-index: 500;
+  z-index: 109;
   opacity: 0;
   visibility: hidden;
   border-radius: 0.25rem;
-  border-top: 3px solid var(--color-pink);
+  border-top: 3px solid var(--color-violet-700);
   background: var(--color-white);
   -webkit-box-shadow: var(--shadow-medium);
           box-shadow: var(--shadow-medium);
@@ -303,7 +314,7 @@ video {
   font-weight: 500;
   line-height: 1;
   padding: 0.75rem 0;
-  color: var(--color-pink);
+  color: var(--color-violet-800);
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -321,11 +332,11 @@ video {
 }
 .header .menu > ul > li .menu-subs.menu-mega > .list-item > ul > li > a:hover,
 .header .menu > ul > li .menu-subs > ul > li > a:hover {
-  color: var(--color-pink);
+  color: var(--color-violet-800);
 }
 .header-item-right a:hover,
 .header .menu > ul > li:hover > a {
-  color: var(--color-pink);
+  color: var(--color-violet-800);
 }
 .header .menu-mobile-header,
 .header .menu-mobile-toggle {
@@ -358,6 +369,8 @@ video {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin: 0 auto;
+    padding: 0.5rem 0;
   }
 
   .header .menu-mobile-toggle {
@@ -409,9 +422,9 @@ video {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20rem;
+    width: 75%;
     height: 100%;
-    z-index: 1099;
+    z-index: 111;
     overflow: hidden;
     background: var(--color-white);
     -webkit-transform: translate(-100%);
@@ -461,7 +474,7 @@ video {
             justify-content: space-between;
     top: 0;
     height: 3.125rem;
-    z-index: 501;
+    z-index: 110;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background: var(--color-white);
   }
@@ -576,12 +589,12 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1098;
+    z-index: 100;
     opacity: 0;
     visibility: hidden;
-    background: rgba(0, 0, 0, 0.55);
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    background: rgba(0, 0, 0, 0.65);
+    -webkit-transition: all 0.45s ease-in-out;
+    transition: all 0.45s ease-in-out;
   }
   .overlay.active {
     opacity: 1;
