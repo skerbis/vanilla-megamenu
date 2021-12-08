@@ -1,3 +1,3 @@
 # Responsive Mega Menu
 
-Create a Responsive Mega-menu with Dropdown with HTML5, SCSS, and Vanilla JavaScript.
+Create a Responsive Navbar Megamenu with HTML5, SCSS, and Vanilla JavaScript.
